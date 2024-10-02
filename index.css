@@ -1,0 +1,25 @@
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+    width: 20rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.menu .a {
+    color: #e1e1e1;
+}
+
+.menu *:link {
+    color: #e1e1e1;
+    text-decoration: none;
+}
+
+.menu *:visited{
+    color: #a2a2a2;
+    text-decoration: none;
+}

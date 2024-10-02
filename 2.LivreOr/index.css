@@ -1,0 +1,62 @@
+body {
+    background-color: #e2bd18;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2,
+h3 {
+    padding-inline-start: 5rem;
+}
+
+table>tbody>tr>td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+body>form>fieldset {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+form>fieldset>div,
+form>fieldset>div>* {
+    display: block;
+}
+
+form>fieldset>div>select,
+form>fieldset>div>input,
+form>fieldset>div>textarea {
+    width: 40rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    resize: none;
+    background-color: #5e5e5e;
+    color: white;
+}
+
+form>fieldset>div>textarea {
+    height: 10rem;
+}
+
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    form>fieldset>div>select,
+    form>fieldset>div>input,
+    form>fieldset>div>textarea {
+        width: 95%;
+    }
+
+    iframe {
+        height: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body div {
+    width: 20rem;
+}
+
+body>* {
+    padding-inline-start: 5rem;
+}
+
+body>ul>*,
+body>ol>*,
+body>table>tbody>tr>td {
+    cursor: pointer;
+}
+
+body>ol>li:hover {
+    color: red;
+}
+
+body a:link,
+body a:visited {
+    color: #e1e1e1;
+}
+
+body>table>tbody>tr>td {
+    padding: 1rem
+}
+
+body>table>tbody>tr>td>img {
+    max-height: 150px;
+}
+
+body>table>tbody>tr>td:hover {
+    color: red;
+}
+
+body > form > fieldset > div{
+    width: 100%;
+}
+
+body > form > fieldset > div > label{
+    width: 100%;
+    display: block;
+}
+
+body > form > fieldset > div > input, body > form > fieldset > div > textarea{
+    margin: 1rem 0;
+    padding: 0.25rem;
+    width: 50%;
+    background-color: #3f3f3f;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+body > form > fieldset > div > input::placeholder, body > form > fieldset > div > textarea::placeholder{
+    color: #9a9a9a;
+}
+
+body > form > fieldset > div > textarea{
+    height: 10rem;
+    resize: none;
+}
