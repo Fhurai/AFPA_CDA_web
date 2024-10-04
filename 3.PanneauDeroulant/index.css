@@ -30,12 +30,12 @@ body {
 }
 
 .panneau input:checked~.contenu {
-    height: 0rem;
+    height: 10rem;
 }
 
 .panneau .contenu {
     padding: 0;
-    height: 10rem;
+    height: 0rem;
     transition: height 1s linear;
     overflow: hidden;
 }
