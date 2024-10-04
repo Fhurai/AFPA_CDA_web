@@ -1,19 +1,19 @@
-body{
+body {
     background-color: black;
     color: white;
 }
 
-.panneau{
+.panneau {
     border: 1px solid grey;
     text-align: center;
     border-radius: 1rem;
 }
 
-.panneau > *{
+.panneau>* {
     padding: 0.5rem
 }
 
-.panneau label{
+.panneau label {
     background-color: grey;
     color: black;
     display: block;
@@ -21,41 +21,41 @@ body{
     cursor: pointer;
 }
 
-.panneau label:hover{
+.panneau label:hover {
     filter: brightness(1.5);
 }
 
-.panneau input{
+.panneau input {
     display: none;
 }
 
-.panneau input:checked~.contenu{
+.panneau input:checked~.contenu {
     height: 0rem;
 }
 
-.panneau .contenu{
+.panneau .contenu {
     padding: 0;
     height: 10rem;
     transition: height 1s linear;
     overflow: hidden;
 }
 
-.modal .modal-btn{
+.modal .modal-btn {
     background-color: grey;
     color: black;
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
 
-.modal .modal-btn:hover{
+.modal .modal-btn:hover {
     filter: brightness(0.85)
 }
 
-.modal input{
+.modal input {
     visibility: hidden;
 }
 
-.modal .modal-backdrop{
+.modal .modal-backdrop {
     display: none;
     background: rgba(0, 0, 0, 0.85);
     position: fixed;
@@ -66,10 +66,51 @@ body{
     z-index: 50;
 }
 
-.modal #modal:checked~.modal-backdrop{
+.modal #modal:checked~.modal-backdrop {
     display: block;
 }
 
-.modal .modal-dialog{
-    
+.modal .modal-dialog {
+    display: none;
+    z-index: 100;
+    background-color: black;
+    width: 30rem;
+    border: 1px solid silver;
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 5rem;
+}
+
+.modal #modal:checked~.modal-dialog {
+    display: block;
+}
+
+.modal .modal-dialog .modal-header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: silver;
+    color: black;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.modal .modal-dialog .modal-header h3{
+    display: block;
+    width: 100%;
+}
+
+.modal .modal-dialog .modal-header label{
+    margin: 1rem 0 1rem 2rem;
+    font-family: cursive;
+}
+
+.modal .modal-dialog .modal-body{
+    text-align: justify;
+    margin: 1rem
 }
