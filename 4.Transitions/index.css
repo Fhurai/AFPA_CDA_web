@@ -1,0 +1,248 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+body.blue {
+    background: linear-gradient(130deg, rgb(68, 115, 171), rgb(36, 133, 194));
+}
+
+body.golden {
+    background-color: rgb(255 177 0 / 62%);
+}
+
+div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+img {
+    width: 240px;
+    position: absolute;
+}
+
+img.line {
+    animation: moveLine 20s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+img.around {
+    animation: moveAround 20s infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 5rem;
+    z-index: 100;
+}
+
+img.angles {
+    animation: moveAngles 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveLine {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    50% {
+        left: 100%;
+        margin-left: -240px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes moveAngles {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 100%;
+        margin-left: -240px;
+        margin-top: 0px;
+        top: 0px;
+    }
+
+    50% {
+        left: 100%;
+        margin-left: -240px;
+        top: 100%;
+        margin-top: -135px;
+    }
+
+    75% {
+        left: 0px;
+        margin-left: 0px;
+        top: 100%;
+        margin-top: -135px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes moveAround {
+
+    0% {
+        /*Bas droite*/
+        left: 100%;
+        margin-left: -240px;
+        top: 100%;
+        margin-top: -135px;
+        width: 240px;
+    }
+
+    18% {
+        width: 240px;
+        top: 0px;
+    }
+
+    30% {
+        /*Haut droite*/
+        left: 100%;
+        margin-left: -240px;
+        margin-top: 67.5px;
+        top: 67.5px;
+        width: 0px;
+    }
+
+    38% {
+        width: 240px;
+    }
+
+    54% {
+        width: 240px;
+    }
+
+    60% {
+        /*Bas gauche*/
+        left: 0px;
+        margin-left: 240px;
+        top: 100%;
+        margin-top: -135px;
+        width: 0px;
+    }
+
+    66% {
+        width: 240px;
+    }
+
+    90% {
+        /*Haut gauche*/
+        left: 0px;
+        top: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    100% {
+        /*Bas droite*/
+        left: 100%;
+        margin-left: -240px;
+        top: 100%;
+        margin-top: -135px;
+        width: 240px;
+    }
+}
+
+img.house {
+    width: 480px;
+    top: 0px;
+    left: 100%;
+    margin-left: -480px;
+    animation: 20s linear infinite 5.8s rotation;
+}
+
+img.battlefield {
+    width: 480px;
+    top: 100%;
+    left: 0px;
+    margin-top: -270px;
+    animation: 20s ease-in-out infinite 12s party;
+}
+
+.center {
+    width: 1440px;
+    height: 649px;
+    top: 135px;
+    left: 240px;
+}
+
+.center img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+@keyframes party {
+    0% {
+        width: 480px;
+        top: 100%;
+        left: 0px;
+        margin-top: -270px;
+    }
+
+    1% {
+        width: 360px;
+        top: 100%;
+        left: 0px;
+        margin-top: -202.5px;
+    }
+
+    1.5% {
+        width: 600px;
+        top: 100%;
+        left: 0px;
+        margin-top: -337.5px;
+    }
+
+    2% {
+        width: 360px;
+        top: 100%;
+        left: 0px;
+        margin-top: -202.5px;
+    }
+
+    3% {
+        width: 480px;
+        top: 100%;
+        left: 0px;
+        margin-top: -270px;
+    }
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+        animation-play-state: running;
+    }
+
+    1%{
+        transform: rotate(360deg);
+    }
+
+    2%{
+        transform: rotate(0deg);
+        animation-play-state: paused;
+    }
+}
+
+ul {
+    position: absolute;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: blue;
+}
