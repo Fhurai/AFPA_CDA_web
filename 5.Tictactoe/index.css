@@ -1,0 +1,109 @@
+/**
+ * COMMON hydrid & matrice.
+ */
+html,
+body {
+    background-color: rgb(209, 196, 125);
+}
+
+form,
+.informations {
+    width: 24rem;
+    margin: 5rem auto;
+    background-color: transparent;
+}
+
+form.filled {
+    visibility: hidden;
+}
+
+form fieldset {
+    border-radius: 0.5rem;
+}
+
+.informations {
+    visibility: hidden;
+}
+
+.informations.end {
+    font-weight: bold;
+}
+
+.informations.red,
+.informations.blue,
+.informations.green {
+    visibility: visible;
+    text-align: center;
+    display: grid;
+}
+
+.informations.red::before {
+    color: red;
+    content: "Red player";
+}
+
+.informations.red:not(.end)::before {
+    content: "Red player,";
+}
+
+.informations.blue::before {
+    color: blue;
+    content: "Blue player";
+}
+
+.informations.blue:not(.end)::before {
+    content: "Blue player,";
+}
+
+.informations.green::before {
+    content: "Players, ";
+    color: green;
+}
+
+/**
+ * Board Hybrid
+ */
+div.board {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+div.board div {
+    border: 1px solid black;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+div.board div.red {
+    background-color: #ff9999;
+}
+
+div.board div.blue {
+    background-color: #9999ff;
+}
+
+/*
+ * Board matrice
+ */
+table.board {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+table.board tr td {
+    border: 1px solid black;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+table.board tr td.red {
+    background-color: #ff9999;
+}
+
+table.board tr td.blue {
+    background-color: #9999ff;
+}

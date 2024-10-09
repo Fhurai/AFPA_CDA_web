@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Tictactoe</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Menu</legend>
+            <div class="control">
+                <label for="nbCases">Number of cases</label>
+                <input type="number" name="cases" id="nbCases" size="1" min="3" max="8" placeholder="3-8" value="3">
+            </div>
+            <div class="control">
+                <input type="button" value="Choose" />
+            </div>
+            <hr>
+            <a href="./matrix.html">Go matrice !</a>
+        </fieldset>
+    </form>
+    <div class="board"></div>
+    <div id="informations" class="informations">your turn !</div>
+</body>
+<script src="./index.js"></script>
+</html>
