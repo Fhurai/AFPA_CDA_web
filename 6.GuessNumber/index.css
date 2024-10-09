@@ -1,0 +1,84 @@
+/**
+ * COMMON.
+ */
+html,
+body {
+    background-color: rgb(209, 196, 125);
+}
+
+form {
+    width: 24rem;
+    margin: 5rem auto;
+    background-color: transparent;
+}
+
+form.filled {
+    visibility: hidden;
+}
+
+form fieldset {
+    border-radius: 0.5rem;
+}
+
+form fieldset>* {
+    margin: 0.5rem 0;
+}
+
+form#game{
+    width: 24rem;
+    margin: 5rem auto;
+    background-color: transparent;
+    visibility: hidden;
+}
+
+div.history.on, form#game.on{
+    visibility: visible;
+}
+
+div.history{
+    visibility: hidden;
+    margin: 5rem auto;
+    width: 24rem;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow: auto;
+    height: 10rem;
+}
+
+div.history div.success::before{
+    content: "✌ ";
+}
+
+div.history div.success{
+    color: green;
+}
+
+div.history div.wrong{
+    color: red;
+}
+
+div.history div.wrong.higher::before{
+    content: "👆 ";
+}
+
+div.history div.wrong.lower::before{
+    content: "👇 ";
+}
+
+div.bar{
+    display: flex;
+    justify-content: center;
+}
+
+div.bar div{
+    background-color: grey;
+}
+
+div.bar div.wrong{
+    background-color: red;
+}
+
+div.bar div.success{
+    background-color: green;
+}

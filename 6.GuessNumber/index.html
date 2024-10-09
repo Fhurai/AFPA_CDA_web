@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <form id="menu">
+        <fieldset>
+            <legend>Menu</legend>
+            <div class="control">
+                <label for="maxLimit">Set the max limit for number</label>
+                <input name="max" id="maxLimit"  type="number" placeholder="1-999999999999999999" min="1" value="1" />
+            </div>
+            <div class="control">
+                <input type="button" value="Set max limit">
+            </div>
+        </fieldset>
+    </form>
+    <div id="board">
+        <div class="bar">
+
+        </div>
+        <div class="history">
+
+        </div>
+    </div>
+    <form id="game">
+        <fieldset>
+            <legend>Game</legend>
+            <div class="control">
+                <label>Guess the number</label>
+                <input name="guess" id="guessNumber" type="number" min="0">
+                <input id="proposeNumber" value="Propose" type="button">
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>
