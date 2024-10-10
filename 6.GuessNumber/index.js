@@ -73,13 +73,13 @@ function propose() {
                 div.classList = "wrong lower";
                 div.innerHTML = "Lower than " + proposition;
                 
-                limits[1] = proposition; // Adding the given number as the high limit.
+                if(limits[1] > proposition) limits[1] = proposition; // Adding the given number as the high limit.
             } else if (proposition < number) {
                 // If proposition lower than guess number then history entry is edited to show it.
                 div.classList = "wrong higher";
                 div.innerHTML = "Higher than " + proposition;
                 
-                limits[0] = proposition; // Adding the given number as the low limit.
+                if(limits[0] < proposition) limits[0] = proposition; // Adding the given number as the low limit.
             } else if (proposition === number) {
                 // If proposition is the right number then history entry is edited to show it.
                 div.className = "success";
