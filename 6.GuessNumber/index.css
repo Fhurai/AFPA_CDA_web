@@ -75,8 +75,25 @@ div.bar div{
     background-color: lightgray;
 }
 
+div.bar div{
+    width: 1px;
+}
+
 div.bar div.wrong{
     background-color: red;
+}
+
+div.bar div.wrong.limit::after{
+    content: attr(id);
+    position: absolute;
+}
+
+div.bar div.wrong.limit.low::after{
+    margin: 1.5rem 0;
+}
+
+div.bar div.wrong.limit.high::after{
+    margin: -1.5rem 0;
 }
 
 div.bar div.success{
