@@ -1,0 +1,33 @@
+html, body{
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+section form{
+    width: 20rem;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+section form div{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1rem 0;
+}
+
+section form div input[type='button']{
+    width: 5rem;
+    margin: 1rem auto 0;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+section > div{
+    width: 20rem;
+    color: brown;
+    margin: 1rem auto;
+    background-color: antiquewhite;
+    padding: 0.5rem;
+}

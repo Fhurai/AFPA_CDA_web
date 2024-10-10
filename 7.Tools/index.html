@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tools</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <section id="factoriel">
+        <form>
+            <h3>Factoriel</h3>
+            <div class="control">
+                <label for="factoriel_input">Give a number from 1 to 9999.</label>
+                <input type="number" name="factoriel" id="factoriel_input" min="1" max="9999" placeholder="1-9999">
+            </div>
+            <div class="control">
+                <input type="button" value="Calculate">
+            </div>
+        </form>
+        <div class="result">&nbsp;</div>
+    </section>
+    <section id="palindrome">
+        <form>
+            <h3>Palindrome</h3>
+            <div class="control">
+                <label for="palindrome_input">Check your word for palindrome.</label>
+                <input type="text" name="palindrome" id="palindrome_input">
+            </div>
+            <div>
+                <input type="button" value="Check">
+            </div>
+        </form>
+        <div class="result">&nbsp;</div>
+    </section>
+    <section id="anagramme">
+        <form>
+            <h3>Anagrammes</h3>
+            <div>
+                <label for="anagrammes1_input">First word for anagramme check</label>
+                <input type="text" name="anagrammes1" id="anagrammes1_input">
+            </div>
+            <div>
+                <label for="anagrammes2_input">Second word for anagramme check</label>
+                <input type="text" name="anagrammes2" id="anagrammes2_input">
+            </div>
+            <div>
+                <input type="button" value="Check">
+            </div>
+        </form>
+        <div class="result">&nbsp;</div>
+    </section>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
