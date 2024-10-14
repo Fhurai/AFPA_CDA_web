@@ -3,21 +3,27 @@ const inputFactoriel = document.querySelector("#factoriel input[type='number']")
 const inputPalindrome = document.querySelector("#palindrome input[type='text']");
 const inputAnagramme1 = document.querySelectorAll("#anagramme input[type='text']")[0];
 const inputAnagramme2 = document.querySelectorAll("#anagramme input[type='text']")[1];
+const inputDivideNumber = document.querySelectorAll("#double input[type='text']")[0];
+const inputDivider1 = document.querySelectorAll("#double input[type='text']")[1];
+const inputDivider2 = document.querySelectorAll("#double input[type='text']")[2];
 
 //Inputs to send data.
 const btnFactoriel = document.querySelector("#factoriel input[type='button']");
 const btnPalindrome = document.querySelector("#palindrome input[type='button']");
 const btnAnagramme = document.querySelector("#anagramme input[type='button']");
+const btnDivide = document.querySelector("#double input[type='button']");
 
 // Results fields
 const resultFactoriel = document.querySelector("#factoriel div.result");
 const resultPalindrome = document.querySelector("#palindrome div.result");
 const resultAnagramme = document.querySelector("#anagramme div.result");
+const resultDivide = document.querySelector("#double div.result");
 
 document.addEventListener("DOMContentLoaded", function () {
     factoriel();
     palindrome();
     anagrammes();
+    doubledivide();
 });
 
 /**
@@ -81,7 +87,7 @@ function palindrome() {
  */
 function anagrammes() {
     btnAnagramme.addEventListener("click", function () {
-        
+
         if (inputAnagramme1.value != "" && inputAnagramme2.value != "") { // User gives two not empty words.
             // Initialization of variables.
             let word1 = inputAnagramme1.value;
@@ -106,5 +112,40 @@ function anagrammes() {
     resultAnagramme.previousElementSibling.addEventListener("submit", function (event) { // Form submit
         event.preventDefault(); // Prevent the page reload.
         btnAnagramme.click(); // Click on button instead.
+    });
+}
+
+function doubledivide() {
+    btnDivide.addEventListener("click", function () {
+
+        if (inputDivideNumber.value !== "" && inputDivider1.value !== "" && inputDivider2.value !== "") {
+            let number = Number.parseInt(inputDivideNumber.value);
+            let divider1 = Number.parseInt(inputDivider1.value);
+            let divider2 = Number.parseInt(inputDivider2.value);
+            let result1 = 0;
+            let result2 = 0;
+
+            resultDivide.innerHTML = "";
+
+            for (let index = 1; index < (number / 2); index++) {
+
+                if ((number - (divider1 * index)) % divider2 === 0) {
+                    result1 = index;
+                    result2 = (number - (divider1 * index)) / divider2;
+
+                    if (result1 != divider2) {
+                        if (result1 > 0 && result2 > 0)
+                            resultDivide.innerHTML += "<div>" + divider1 + " x " + result1 + " + " + divider2 + " x " + result2 + "</div>";
+                    } else
+                        if (result1 > 0 && result2 > 0)
+                            resultDivide.innerHTML += "<div>" + result1 + " x " + "(" + divider1 + " + " + result2 + ")" + "</div>";
+                }
+            }
+        }
+    });
+
+    resultDivide.previousElementSibling.addEventListener("submit", function (event) { // Form submit
+        event.preventDefault(); // Prevent the page reload.
+        btnDivide.click(); // Click on button instead.
     });
 }
