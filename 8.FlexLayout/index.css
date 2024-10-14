@@ -11,20 +11,23 @@ body {
 .board {
     position: relative;
     top: 0;
-    width: 50vw;
-    height: 50vw;
     min-width: 300px;
     min-height: 300px;
     max-width: 10vh;
     max-height: 10vh;
     margin: 2rem auto;
+    border: 12px solid #6D5720;
+    border-radius: 10px;
 }
 
 .board::before {
     content: attr(id);
     position: absolute;
     z-index: 30;
-    color: lightgreen;
+    color: whitesmoke;
+    background-color: #6D5720;
+    padding: 5px;
+    border-radius: 10px;
     margin: -1.5rem 0.5rem;
     text-transform: capitalize;
     font-family: system-ui;
@@ -47,10 +50,7 @@ body {
 
 .background {
     z-index: 10;
-    border-radius: 10px;
     background-color: #1F5768;
-    border-color: lightgreen;
-    border-style: groove;
 }
 
 .lilypad,
