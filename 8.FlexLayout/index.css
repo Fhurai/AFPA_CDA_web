@@ -5,6 +5,7 @@
 body {
     display: flex;
     flex-flow: row wrap;
+    background-color: #298a32;
 }
 
 .board {
@@ -23,7 +24,7 @@ body {
     content: attr(id);
     position: absolute;
     z-index: 30;
-    color: black;
+    color: lightgreen;
     margin: -1.5rem 0.5rem;
     text-transform: capitalize;
     font-family: system-ui;
@@ -48,6 +49,8 @@ body {
     z-index: 10;
     border-radius: 10px;
     background-color: #1F5768;
+    border-color: lightgreen;
+    border-style: groove;
 }
 
 .lilypad,
@@ -98,71 +101,143 @@ body {
 /**
  *
  * Background is the initial situation
- * Pond is the solution.
+ *
  */
 
-
-/**
- * Board1
- */
 #board1 .background {
     justify-content: flex-end;
 }
 
-#board1 .pond {
-    justify-content: right;
-}
-
-/**
- * Board2
- */
 #board2 .background {
     justify-content: center;
+}
+
+#board3 .background {
+    justify-content: space-around;
+}
+
+#board4 .background {
+    justify-content: space-between;
+}
+
+#board5 .background {
+    align-items: flex-end;
+}
+
+#board6 .background {
+    justify-content: center;
+    align-items: center;
+}
+
+#board7 .background {
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#board8 .background {
+    flex-direction: row-reverse;
+}
+
+#board9 .background {
+    flex-direction: column;
+}
+
+#board10 .background {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+#board11 .background {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#board12 .background {
+    flex-direction: column-reverse;
+    justify-content: space-between
+}
+
+#board13 .background {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end
+}
+
+#board14 .background .lilypad.yellow {
+    order: 2;
+}
+
+#board15 .background .lilypad.red {
+    order: -1;
+}
+
+#board16 .background .lilypad.yellow {
+    align-self: flex-end;
+}
+
+#board17 .background .lilypad.yellow {
+    align-self: flex-end;
+    order: 2;
+}
+
+#board18 .background {
+    flex-wrap: wrap;
+}
+
+#board19 .background {
+    flex-flow: column wrap;
+}
+
+#board20 .background {
+    flex-flow: column wrap;
+}
+
+#board21 .background {
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#board22 .background {
+    flex-wrap: wrap;
+    align-content: flex-end
+}
+
+#board23 .background {
+    flex-direction: column-reverse;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#board24 .background {
+    flex-flow: column-reverse wrap-reverse;
+    place-content: space-between center;
+}
+
+
+/**
+ *
+ * Pond is the solution.
+ *
+ */
+
+#board1 .pond {
+    justify-content: right;
 }
 
 #board2 .pond {
     justify-content: center;
 }
 
-/**
- * Board3
- */
-#board3 .background {
-    justify-content: space-around;
-}
-
 #board3 .pond {
     justify-content: space-around;
-}
-
-/**
- * Board4
- */
-#board4 .background {
-    justify-content: space-between;
 }
 
 #board4 .pond {
     justify-content: space-between;
 }
 
-/**
- * Board5
- */
-#board5 .background {
-    align-items: flex-end;
-}
-
 #board5 .pond {
     align-items: flex-end;
-}
-
-/**
- * Board6
- */
-#board6 .background {
-    justify-content: center;
-    align-items: center;
 }
 
 #board6 .pond {
@@ -170,47 +245,17 @@ body {
     align-items: center;
 }
 
-/**
- * Board7
- */
-#board7 .background {
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
 #board7 .pond {
     justify-content: space-around;
     align-items: flex-end;
-}
-
-/**
- * Board8
- */
-#board8 .background {
-    flex-direction: row-reverse;
 }
 
 #board8 .pond {
     flex-direction: row-reverse;
 }
 
-/**
- * Board9
- */
-#board9 .background {
-    flex-direction: column;
-}
-
 #board9 .pond {
     flex-direction: column;
-}
-
-/**
- * Board10
- */
-#board10 .background {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
 }
 
 #board10 .pond {
@@ -218,40 +263,17 @@ body {
     justify-content: flex-end
 }
 
-/**
- * Board11
- */
-#board11 .background {
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
 #board11 .pond {
     flex-direction: column;
     justify-content: flex-end;
 }
 
-/**
- * Board12
- */
-#board12 .background {
-    flex-direction: column-reverse;
-    justify-content: space-between
-}
 
 #board12 .pond {
     flex-direction: column-reverse;
     justify-content: space-between;
 }
 
-/**
- * Board13
- */
-#board13 .background {
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: flex-end
-}
 
 #board13 .pond {
     flex-direction: row-reverse;
@@ -259,45 +281,17 @@ body {
     align-items: flex-end;
 }
 
-/**
- * Board14
- */
-#board14 .background .lilypad.yellow {
-    order: 2;
-}
 
 #board14 .pond .frog.yellow {
     order: 3;
-}
-
-/**
- * Board15
- */
-#board15 .background .lilypad.red {
-    order: -1;
 }
 
 #board15 .pond .frog.red {
     order: -3;
 }
 
-/**
- * Board16
- */
-#board16 .background .lilypad.yellow {
-    align-self: flex-end;
-}
-
 #board16 .pond .frog.yellow {
     align-self: flex-end
-}
-
-/**
- * Board17
- */
-#board17 .background .lilypad.yellow {
-    align-self: flex-end;
-    order: 2;
 }
 
 #board17 .pond .frog.yellow {
@@ -305,22 +299,8 @@ body {
     align-self: flex-end
 }
 
-/**
- * Board18
- */
-#board18 .background {
-    flex-wrap: wrap;
-}
-
 #board18 .pond {
     flex-wrap: wrap;
-}
-
-/**
- * Board19
- */
-#board19 .background {
-    flex-flow: column wrap;
 }
 
 #board19 .pond {
@@ -328,23 +308,9 @@ body {
     flex-wrap: wrap
 }
 
-/**
- * Board20
- */
-#board20 .background {
-    flex-flow: column wrap;
-}
 
 #board20 .pond {
     flex-flow: column wrap;
-}
-
-/**
- * Board21
- */
-#board21 .background {
-    align-content: flex-start;
-    flex-wrap: wrap;
 }
 
 #board21 .pond {
@@ -352,27 +318,11 @@ body {
     align-content: flex-start
 }
 
-/**
- * Board22
- */
-#board22 .background {
-    flex-wrap: wrap;
-    align-content: flex-end
-}
-
 #board22 .pond {
     flex-wrap: wrap;
     align-content: flex-end
 }
 
-/**
- * Board23
- */
-#board23 .background {
-    flex-direction: column-reverse;
-    align-content: center;
-    flex-wrap: wrap;
-}
 
 #board23 .pond {
     flex-direction: column-reverse;
@@ -380,13 +330,6 @@ body {
     flex-wrap: wrap;
 }
 
-/**
- * Board24
- */
-#board24 .background {
-    flex-flow: column-reverse wrap-reverse;
-    place-content: space-between center;
-}
 
 #board24 .pond {
     flex-flow: column-reverse wrap-reverse;
