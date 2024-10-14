@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-flow: row wrap;
     background-color: #298a32;
+    font-family: system-ui;
+    color: whitesmoke;
 }
 
 .board {
@@ -23,7 +25,7 @@ body {
 .board::before {
     content: attr(id);
     position: absolute;
-    z-index: 30;
+    z-index: 60;
     color: whitesmoke;
     background-color: #6D5720;
     padding: 5px;
@@ -31,6 +33,21 @@ body {
     margin: -1.5rem 0.5rem;
     text-transform: capitalize;
     font-family: system-ui;
+}
+
+.board .solution{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(15, 15, 15, 0.5);
+    visibility: hidden;
+}
+
+.board:hover .solution{
+    visibility: visible;
 }
 
 .garden,
