@@ -1,9 +1,15 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 /**
  * COMMON.
  */
 html,
 body {
-    background-color: rgb(209, 196, 125);
+    background-color: var(--exo-primary);
 }
 
 form {
@@ -44,6 +50,7 @@ div.history{
     padding: 1rem;
     overflow: auto;
     height: 10rem;
+    background-color: var(--exo-color);
 }
 
 div.history div.success::before{
