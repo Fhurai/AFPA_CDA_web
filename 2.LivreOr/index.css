@@ -1,6 +1,12 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 body {
-    background-color: #e2bd18;
-    color: #000000;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -33,8 +39,8 @@ form>fieldset>div>textarea {
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     resize: none;
-    background-color: #5e5e5e;
-    color: white;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
 }
 
 form>fieldset>div>textarea {
