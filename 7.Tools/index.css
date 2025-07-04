@@ -1,6 +1,12 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 html, body{
-    background-color: rgb(100, 100, 100);
-    color: white;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
     display: flex;
     flex-flow: row wrap;
 }
@@ -8,7 +14,7 @@ html, body{
 section form{
     width: 20rem;
     margin: 0 auto;
-    border: 1px solid white;
+    border: 1px solid var(--exo-color);
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
@@ -28,8 +34,8 @@ section form div input[type='button']{
 
 section > div{
     width: 20rem;
-    color: brown;
+    color: black;
     margin: 1rem auto;
-    background-color: antiquewhite;
+    background-color: var(--exo-color);
     padding: 0.5rem;
 }
