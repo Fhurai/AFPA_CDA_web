@@ -1,8 +1,15 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 html,
 body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    background-color: var(--exo-primary);
 }
 
 body.blue {
@@ -171,11 +178,15 @@ img.battlefield {
     animation: 20s ease-in-out infinite 12s party;
 }
 
+.island{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .center {
-    width: 1440px;
-    height: 649px;
-    top: 135px;
-    left: 240px;
+    width: 75%;
+    height: 70%;
 }
 
 .center img {
@@ -244,5 +255,5 @@ ul {
 
 ul li a {
     text-decoration: none;
-    color: blue;
+    color: var(--exo-secondary);
 }
