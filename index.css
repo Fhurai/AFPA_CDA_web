@@ -1,6 +1,12 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 body {
-    background-color: #1e1e1e;
-    color: #e1e1e1;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -11,15 +17,15 @@ body {
 }
 
 .menu .a {
-    color: #e1e1e1;
+    color: var(--exo-color);
 }
 
 .menu *:link {
-    color: #e1e1e1;
+    color: var(--exo-color);
     text-decoration: none;
 }
 
 .menu *:visited{
-    color: #a2a2a2;
+    color: var(--exo-color);
     text-decoration: none;
 }
