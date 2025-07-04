@@ -1,10 +1,16 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
 }
 
 .panneau {
-    border: 1px solid grey;
+    border: 1px solid var(--exo-secondary);
     text-align: center;
     border-radius: 1rem;
 }
@@ -14,15 +20,15 @@ body {
 }
 
 .panneau label {
-    background-color: grey;
-    color: black;
+    background-color: var(--exo-secondary);
+    color: var(--exo-color);
     display: block;
     border-radius: 0.5rem 0.5rem 0 0;
     cursor: pointer;
 }
 
 .panneau label:hover {
-    filter: brightness(1.5);
+    filter: brightness(0.85);
 }
 
 .panneau input {
@@ -41,10 +47,11 @@ body {
 }
 
 .modal .modal-btn {
-    background-color: grey;
-    color: black;
+    background-color: var(--exo-secondary);
+    color: var(--exo-color);
     padding: 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .modal .modal-btn:hover {
@@ -73,9 +80,9 @@ body {
 .modal .modal-dialog {
     display: none;
     z-index: 100;
-    background-color: black;
+    background-color: var(--exo-primary);
     width: 30rem;
-    border: 1px solid silver;
+    border: 1px solid var(--exo-primary);
     position: absolute;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -94,8 +101,8 @@ body {
 .modal .modal-dialog .modal-header{
     display: flex;
     flex-direction: row-reverse;
-    background-color: silver;
-    color: black;
+    background-color: var(--exo-secondary);
+    color: var(--exo-color);
     border-radius: 0.5rem;
     padding: 0 0.5rem;
 }
