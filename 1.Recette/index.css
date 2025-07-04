@@ -1,6 +1,12 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
+
 body {
-    background-color: #1e1e1e;
-    color: #e1e1e1;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -19,12 +25,12 @@ body>table>tbody>tr>td {
 }
 
 body>ol>li:hover {
-    color: red;
+    color: var(--exo-secondary);
 }
 
 body a:link,
 body a:visited {
-    color: #e1e1e1;
+    color: var(--exo-color);
 }
 
 body>table>tbody>tr>td {
@@ -36,7 +42,7 @@ body>table>tbody>tr>td>img {
 }
 
 body>table>tbody>tr>td:hover {
-    color: red;
+    color: var(--exo-secondary);
 }
 
 body > form > fieldset > div{
@@ -52,14 +58,14 @@ body > form > fieldset > div > input, body > form > fieldset > div > textarea{
     margin: 1rem 0;
     padding: 0.25rem;
     width: 50%;
-    background-color: #3f3f3f;
-    color: #ffffff;
+    background-color: var(--exo-primary);
+    color: var(--exo-color);
     border-radius: 0.5rem;
     border: none;
 }
 
 body > form > fieldset > div > input::placeholder, body > form > fieldset > div > textarea::placeholder{
-    color: #9a9a9a;
+    color: var(--exo-secondary);
 }
 
 body > form > fieldset > div > textarea{
