@@ -1,9 +1,14 @@
+:root{
+    --exo-primary: #44a33d;
+    --exo-secondary: #87bb34;
+    --exo-color: #e1e1e1;
+}
 /**
  * COMMON hydrid & matrice.
  */
 html,
 body {
-    background-color: rgb(209, 196, 125);
+    background-color: var(--exo-primary);
 }
 
 form,
@@ -23,6 +28,9 @@ form fieldset {
 
 .informations {
     visibility: hidden;
+    background-color: var(--exo-color);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
 }
 
 .informations.end {
@@ -38,7 +46,7 @@ form fieldset {
 }
 
 .informations.red::before {
-    color: red;
+    color: #ff9999;
     content: "Red player";
 }
 
@@ -47,7 +55,7 @@ form fieldset {
 }
 
 .informations.blue::before {
-    color: blue;
+    color: #9999ff;
     content: "Blue player";
 }
 
@@ -57,7 +65,7 @@ form fieldset {
 
 .informations.green::before {
     content: "Players, ";
-    color: green;
+    color: var(--exo-secondary);
 }
 
 /**
@@ -78,11 +86,11 @@ div.board div {
 }
 
 div.board div.red {
-    background-color: #ff9999;
+    background-color: red;
 }
 
 div.board div.blue {
-    background-color: #9999ff;
+    background-color: blue;
 }
 
 /*
